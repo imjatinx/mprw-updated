@@ -1,0 +1,10 @@
+/* producthead section */
+
+  @font-face {
+    font-family: 'Qwitcher Grypen';
+    src: url('../fonts/qwitcher-grypen_5.0.8/webfonts/qwitcher-grypen-latin-400-normal.woff') format('woff2'), /* for modern browsers */
+         url('../fonts/qwitcher-grypen_5.0.8/webfonts/qwitcher-grypen-latin-400-normal.woff2') format('woff'); /* for older browsers */
+    font-weight: normal;
+    font-style: normal;
+    
+  }

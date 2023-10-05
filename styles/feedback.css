@@ -1,0 +1,11 @@
+/* Define your animation class */
+.animateIcon {
+    animation: mymove 600ms alternate infinite ease-in-out;
+    cursor: pointer;
+  }
+  
+  @keyframes mymove {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
+  }
+  

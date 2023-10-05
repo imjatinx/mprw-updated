@@ -1,0 +1,6109 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+  font-family: 'Roboto', sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:#0094B5;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f2f2f2; 
+}
+
+.mprw-mainlogo {
+  height: 110px;
+  width: 110px;
+  pointer-events: none;
+  position: relative;
+  
+}
+
+/* new navbar start */
+
+@media screen and (max-width: 5000px) {
+  .newnavbar {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 24px;
+    max-width: 3000px;
+    }
+    
+    .newnavbar-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    height: 80px;
+    max-width: 1500px;
+    }
+    
+    .newnavbar-logo {
+    color: #fff;
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    }
+    
+    .fa-typo3 {
+    margin-left: 0.5rem;
+    font-size: 1.8rem;
+    }
+    
+    .newnav-menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 40vw;
+    justify-content: center;
+    padding-top: 17px;
+    }
+    
+    .nav-item {
+    height: 80px;
+    }
+    
+    .newnav-links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    }
+    
+    /*.newnav-links:hover {
+    border-bottom: 2px solid #fff;
+    transition: all 0.2s ease-out;
+    }*/
+    
+    .fa-bars {
+      color: white;
+    justify-content: center;
+      display: flex;
+      align-items: center;
+      top: 7px;
+      position: relative;
+    }
+    
+    .newnav-links-mobile {
+    display: none;
+    }
+    
+    .menu-icon {
+    display: none;
+    }
+}
+
+  @media screen and (max-width: 1500px) {
+    .newnavbar {
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 24px;
+      max-width: 3000px;
+      }
+      
+      .newnavbar-container {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      width: 100%;
+      align-items: center;
+      height: 80px;
+      max-width: 1500px;
+      }
+      
+      .newnavbar-logo {
+      color: #fff;
+      justify-self: start;
+      margin-left: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      }
+      
+      .fa-typo3 {
+      margin-left: 0.5rem;
+      font-size: 1.8rem;
+      }
+      
+      .newnav-menu {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      grid-gap: 10px;
+      list-style: none;
+      text-align: center;
+      width: 43vw;
+      justify-content: center;
+      padding-top: 17px;
+      }
+      
+      .nav-item {
+      height: 80px;
+      }
+      
+      .newnav-links {
+      color: #fff;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      padding: 0.5rem 0.8rem;
+      height: 100%;
+      font-size: 15px;
+      font-weight: 600;
+      }
+      
+      /*.newnav-links:hover {
+      border-bottom: 2px solid #fff;
+      transition: all 0.2s ease-out;
+      }*/
+      
+      .fa-bars {
+        color: white;
+      justify-content: center;
+        display: flex;
+        align-items: center;
+        top: 7px;
+        position: relative;
+      }
+      
+      .newnav-links-mobile {
+      display: none;
+      }
+      
+      .menu-icon {
+      display: none;
+      }
+  }
+
+  @media screen and (max-width: 991px) {
+	.NavbarItems {
+	  position: relative;
+	}
+  
+	.newnav-menu {
+	  display: flex;
+	  flex-direction: column;
+	  width: 100%;
+	  height: 75vh;
+	  position: absolute;
+    top: 80px;
+    right: 15px;
+	  opacity: 0;
+	  transition: all 0.5s ease;
+	}
+  
+	.newnav-menu.active {
+    background-color: #083347d2;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+	  right: 15px;
+	  opacity: 1;
+	  transition: all 0.5s ease;
+	  z-index: 100000;
+	  justify-content: center;
+	  padding: 0;
+    position: fixed;
+    top: 80px;
+    width: 70px;
+    border-radius: 50px;
+    display: inline-flex;
+	}
+  
+	.newnav-links {
+    text-align: center;
+    padding: 0rem 1rem;
+    width: 100%;
+    writing-mode: vertical-rl;
+    -webkit-text-orientation: mixed;
+    text-orientation: mixed;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+	.newnav-links:hover {
+	  background-color: #2880b35e;
+	  color: #e7ecee;
+	  border-radius: 0;
+	}
+  
+	.newnavbar-logo {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  transform: translate(25%, 50%);
+	}
+  
+	.menu-icon {
+	  display: block;
+	  position: fixed;
+	  top: 9px;
+	  right: -17px;
+    width: 45px;
+    height: 45px;
+	  transform: translate(-100%, 60%);
+    border: 1px solid #00b3d3bb;
+    background-color: #00b3d3bb;
+    border-radius: 50px;
+	  font-size: 1.8rem;
+	  cursor: pointer;
+    z-index: 1000000;
+  
+	}
+  
+	.fa-times {
+	  color: white;
+	  font-size: 2rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    top: 7px;
+    position: relative;
+	}
+  
+	.newnav-links-mobile {
+	  display: block;
+	  text-align: center;
+	  margin: 2rem auto;
+	  border-radius: 4px;
+	  width: 80%;
+	  text-decoration: none;
+	  font-size: 1.5rem;
+	  background-color: transparent;
+	  color: #fff;
+	  padding: 14px 20px;
+	  border: 1px solid #fff;
+	  transition: all 0.3s ease-out;
+	}
+  
+	.newnav-links-mobile:hover {
+	  background: #fff;
+	  color: #242424;
+	  transition: 250ms;
+	}
+  }
+
+  @media screen and (max-width: 550px) {
+    .newnav-menu.active {
+      width: 45px;
+    }
+    .menu-icon{
+      right: -30px;
+    }
+    .newnav-links{
+      font-size: 14px;
+      height: 85px;
+    }
+  }
+  /* new navbar end */
+
+/* Footer Design start */
+
+#footer{
+  font-family: 'Mulish', sans-serif;
+}
+  
+.footer-logo img {
+  height: 150px;
+  width: 150px;
+  pointer-events: none;
+  margin: 0 0 25px 20px;
+  mix-blend-mode: multiply;
+}
+
+.footer-text{
+  margin-top: 32px;
+  padding-top: 30px;
+  color: white;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.link-section{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.link-section li{
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  list-style: none;
+}
+
+.link-section a{
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.link-section a:hover{
+  color: #2b72b4;
+  font-weight: 600;
+}
+
+
+
+/* Footer Design End */
+
+@media only screen and (max-width: 366px) {
+  .mprw-mainlogo {
+    height: 80px;
+    width: 80px;
+    pointer-events: none;
+  }
+}
+
+@media only screen and (min-width:580px) and (max-width: 1500px) {
+  .link-section p{
+    font-size: 18px;
+   }
+
+  #subfooter-text .footerdiv{
+    padding-right: 10%;
+  }
+  .footer-logo img {
+    height: 110px;
+    width: 110px;
+    pointer-events: none;
+    margin: 0 0 25px 20px;
+  }
+  
+  .footer-text{
+    margin-top: 32px;
+    padding-top: 30px;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  .link-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  
+  .link-section a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .link-section li{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  
+  .link-section a:hover{
+    color: #2b72b4;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (min-width:320px) and (max-width: 580px) {
+  .link-section p{
+    font-size: 16px;
+   }
+   .link-section a{
+    font-size: 14px;
+  }
+   .link-section li{
+    font-size: 14px;
+  }
+   .footer-text{
+    font-size: 16px;
+  }
+  #subfooter-text .footerdiv{
+    padding-right: 18%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .link-section a{
+    font-size: 13px;
+  }
+  .link-section li{
+    font-size: 13px;
+  }
+  .link-section p{
+    font-size: 15px;
+  }
+  .footer-text{
+    font-size: 15px;
+  }
+  #subfooter-text{
+    font-size: 12px;
+  }
+  #subfooter-text .footerdiv{
+    padding-right: 24%;
+  }
+}
+@media only screen and (min-width:994px) and (max-width: 1500px) {
+#footer{
+  height: 645px;
+  background: url('../assets/img/footer.png');
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  position: relative;
+  color: #00294F;
+  padding: 208px 0px 10px 0px;
+}
+.social-logo{
+  padding: 0% 47% 0% 0%;
+}
+.social-logo-div img{
+  width: 30px;
+  height: 30px;
+}
+
+}
+ 
+@media only screen and (min-width:991px) and (max-width: 994px) {
+  #footer{
+    background: url('../assets/img/tab-footer.png');
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    position: relative;
+    color: #00294F;
+    padding: 158px 0px 10px 0px;
+    height: 632px;
+  }
+}
+
+@media only screen and (min-width:370px) and (max-width: 991px) {
+#footer{
+  background: url('../assets/img/tab-footer.png');
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  position: relative;
+  color: #00294F;
+  padding: 158px 0px 10px 0px;
+  height: 1037px;
+}
+.footer-logo img{
+  margin: 0 0 0px -23px;
+  width: 90px;
+  height: 90px;
+}
+.social-logo{
+  padding: 0% 52% 0% 0%;
+}
+.social-logo-div img{
+  width: 30px;
+  height: 30px;
+}
+}
+
+@media only screen and (max-width: 370px) {
+#footer{
+  background: url('../assets/img/mob-footer.png');
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  position: relative;
+  color: #00294F;
+  padding: 76px 0px 10px 0px;
+  height: 960px;
+}
+.footer-logo img{
+  margin: 0 0 0px -13px;
+  height: 87px;
+  width: 87px;
+}
+.social-logo{
+  padding: 0% 39% 0% 0%;
+}
+.social-logo-div img{
+  width: 24px;
+  height: 24px;
+}
+}
+
+#home h1{
+  font-size: 63px;
+}
+
+#home h5 {
+ font-size: 24px;
+}
+
+@media only screen and (max-width: 991px) {
+#home .home-button{
+  justify-content: center;
+  display: flex;
+}
+}
+@media only screen and (max-width: 600px) {
+  #home h5 {
+    font-size: 13px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #home h1 {
+    font-size: 27px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+  }
+}
+
+
+@media only screen and (min-width:600px) and (max-width: 1500px) {
+  #home h1 {
+    font-size: 48px;
+  }
+
+  #home button {
+    width: 33%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #home button {
+    font-size: 12px;
+    width: 45%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width:580px) and (max-width: 770px) {
+  #about img {
+    width: 100%;
+    height: 360px;
+  }
+
+  #about p {
+    font-size: 14x;
+  }
+
+  #about #whyusbox {
+    padding: 8% 12%;
+  }
+  #about #whyus-heading{
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #about #whyusbox {
+    padding: 13%;
+  }
+
+  #about img {
+    width: 100%;
+    height: 380px;
+  }
+
+  #about p {
+    font-size: 14px;
+  }
+
+}
+
+@media only screen and (min-width: 400px) and (max-width: 580px) {
+  #about img {
+    width: 100%;
+    height: 350px;
+  }
+
+  #about p {
+    font-size: 14px;
+  }
+
+  #about #whyusbox {
+    padding: 8% 12%;
+  }
+  #about #whyus-heading{
+    font-size: 32px;
+  }
+}
+
+
+@media only screen and (min-width:1500px) {
+  #company #company-headingbox {
+    padding-top: 37%;
+  }
+#company p{
+  font-size: 24px;
+}
+#company-heading{
+  font-size: 50px;
+}
+#product-heading{
+  font-size: 50px;
+  padding-top: 66px;
+}
+#products p{
+  font-size: 22px;
+}
+
+}
+
+@media only screen and (min-width:990px) and (max-width: 1500px) {
+  #products h1 {
+    padding: 24% 1% 0% 11%
+  }
+
+  #company #company-headingbox {
+    padding-top: 42%;
+  }
+
+  #contact #contact-heading {
+    font-size: 55px;
+    padding: 10% 10% 10% 16%;
+  }
+
+  #contact form {
+    padding: 11%;
+  }
+  #contact input {
+    font-size: 0.8rem;
+  }
+  #contact textarea {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 765px) and (max-width: 990px) {
+  #products h1 {
+    padding: 0% 0% 6% 1%;
+    text-align: center;
+  }
+
+  #company #company-headingbox {
+    padding-top: 0%;
+  }
+
+  #contact #contact-heading {
+    font-size: 45px;
+    padding: 10% 10% 10% 0%;
+  }
+
+  #contact form {
+    padding: 8%;
+  }
+  #contact input {
+    font-size: 12px;
+  }
+  #contact textarea {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 595px) and (max-width: 765px) {
+  #contact #contact-heading {
+    font-size: 43px;
+    padding: 0% 10% 7% 8%;
+  }
+
+  #contact form {
+    padding: 8%;
+  }
+  #contact input {
+    font-size: 10px;
+  }
+  #contact textarea {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 595px) {
+  #contact #contact-heading {
+    font-size: 40px;
+    padding: 0% 10% 9% 1%;
+  }
+
+  #contact form {
+    padding: 6%;
+  }
+
+  #contact input {
+    font-size: 10px;
+  }
+
+  #contact textarea {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  #home #girlimg{
+    position: relative;
+    width: 93%;
+    height: 100%;
+    padding: 0 0 0 25%;
+    left: -8%;
+  }
+
+  #home .home-para{
+    position: relative;
+    font-size: 90%;
+    line-height: 147%;
+  }
+}
+
+@media only screen and (min-width: 990px) and (max-width: 1500px) {
+
+  #home .home-para{
+    position: relative;
+    font-size: 90%;
+    line-height: 147%;
+  }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 5000px) {
+
+  #home .home-para{
+    position: relative;
+    font-size: 129%;
+    line-height: 138%;
+  }
+}
+
+@media only screen and (min-width: 990px) and (max-width: 5000px) {
+  #home #girlimg{
+    position: relative;
+    width: 93%;
+    height: 100%;
+    padding: 0 0 0 25%;
+  }
+}
+
+@media only screen and (min-width: 3000px) and (max-width: 5000px) {
+  #about img{
+    height: 44%;
+  }
+}
+
+@media only screen and (min-width: 2000px) and (max-width: 3000px) {
+  #about img{
+    height: 60%;
+  }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 2000px) {
+  #about img{
+    height: 600px;
+  }
+}
+@media only screen and (min-width: 1500px) and (max-width: 3000px) {
+#company-wrapper{
+  margin: 10% 0% 2% 0%;
+}
+
+#about #whyusbox{
+  padding: 6% 10%;
+}
+#about #whyus-heading{
+  font-size: 48px;
+}
+#about p{
+  font-size: 24px;
+}
+.company-colbox{
+  padding: 5%;
+}
+#missionbox{
+  padding: 1% 5% 10% 1%;
+}
+#visionbox{
+  padding: 10% 1% 1% 5%;
+}
+#contact form {
+  padding: 7%;
+}
+
+#contact .form-box{
+width: 70%;
+position: relative;
+left: 20%;
+}
+#contact input{
+  font-size: 24px;
+}
+#contact textarea{
+  font-size: 24px;
+
+}
+#contact #contact-heading {
+  font-size: 55px;
+  padding: 10% 10% 10% 16%;
+}
+#contact{
+  padding: 8% 0% 0% 0%;
+}
+#about{
+  padding: 8% 0% 0% 0%;
+}
+.link-section p{
+  font-size: 24px;
+ }
+ .link-section a{
+  font-size: 22px;
+}
+ .link-section li{
+  font-size: 22px;
+}
+.footer-text{
+  font-size: 24px;
+}
+#subfooter-text .footerdiv{
+  padding-right: 10%;
+  font-size: 24px;
+}
+#subfooter-text .footerdivfirst{
+  padding-right: 10%;
+  font-size: 24px;
+
+}
+#footer {
+  height: 1180px;
+  background: url('../assets/img/footer.png');
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  position: relative;
+  color: #00294F;
+  padding: 557px 0px 10px 0px;
+}
+
+.social-logo {
+  padding: 2% 47% 0% 0%;
+}
+
+}
+
+@media only screen and (min-width: 3000px) and (max-width: 5000px) {
+  #company-wrapper{
+    margin: 10% 0% 2% 0%;
+  }
+  
+  #about #whyusbox{
+    padding: 6% 10%;
+  }
+  #about #whyus-heading{
+    font-size: 48px;
+  }
+  #about p{
+    font-size: 24px;
+  }
+  .company-colbox{
+    padding: 5%;
+  }
+  #missionbox{
+    padding: 1% 5% 10% 1%;
+  }
+  #visionbox{
+    padding: 10% 1% 1% 5%;
+  }
+  #contact form {
+    padding: 7%;
+  }
+  
+  #contact .form-box{
+  width: 70%;
+  position: relative;
+  left: 20%;
+  }
+  #contact input{
+    font-size: 24px;
+  }
+  #contact textarea{
+    font-size: 24px;
+  
+  }
+  #contact #contact-heading {
+    font-size: 55px;
+    padding: 10% 10% 10% 16%;
+  }
+  #contact{
+    padding: 8% 0% 0% 0%;
+  }
+  #about{
+    padding: 8% 0% 0% 0%;
+  }
+  .link-section p{
+    font-size: 24px;
+   }
+   .link-section a{
+    font-size: 22px;
+  }
+   .link-section li{
+    font-size: 22px;
+  }
+  .footer-text{
+    font-size: 24px;
+  }
+  #subfooter-text .footerdiv{
+    padding-right: 10%;
+    font-size: 24px;
+  }
+  #subfooter-text .footerdivfirst{
+    padding-right: 10%;
+    font-size: 24px;
+  
+  }
+  #footer {
+    height: 1300px;
+    background: url('../assets/img/footer.png');
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    position: relative;
+    color: #00294F;
+    padding: 600px 0px 10px 0px;
+  }
+  
+  .social-logo {
+    padding: 2% 47% 0% 0%;
+  }
+  
+  }
+
+  /*@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+.wrirk-pro{
+  height: 294px;
+}
+  }*/
+  @media only screen and (min-width: 1000px) and (max-width: 1500px) {
+
+    #products #product-heading {
+      font-size: 52px;
+    }
+  
+    #company #company-heading {
+      font-size: 44px;
+    }
+  
+    #about img {
+      width: 100%;
+      height: 450px;
+    }
+  
+    #about p {
+      font-size: 16px;
+    }
+  
+    #about #whyusbox {
+      padding: 8% 12%;
+    }
+  
+    #about {
+      padding: 8% 0%;
+    }
+  
+    #contact {
+      padding: 8% 0% 0% 0%;
+    }
+    
+  }
+
+@media only screen and (min-width: 770px) and (max-width: 1000px) {
+
+  #products #product-heading {
+    font-size: 52px;
+  }
+
+  #company #company-heading {
+    font-size: 44px;
+  }
+
+  #about img {
+    width: 100%;
+    height: 390px;
+  }
+
+  #about p {
+    font-size: 16px;
+  }
+
+  #about #whyusbox {
+    padding: 8% 12%;
+  }
+
+  #about {
+    padding: 8% 0%;
+  }
+
+  #contact {
+    padding: 8% 0% 0% 0%;
+  }
+  
+}
+
+@media only screen and (max-width: 770px) {
+
+  #products #product-1,
+  #product-3,
+  #product-5 {
+    margin-left: 6%;
+    margin-right: 17%;
+  }
+
+  #products #product-2,
+  #product-4 {
+    margin-left: 17%;
+    margin-right: 6%;
+  }
+
+  #products #product-heading {
+    font-size: 32px;
+  }
+
+  #company #company-heading {
+    font-size: 32px;
+  }
+
+ 
+}
+
+/*@media only screen and (min-width: 777px) and (max-width: 990px) {
+  #contact{margin: 10% 8% 10% 1%;}
+}*/
+
+@media only screen and (max-width: 340px) {
+
+  #products #product-1,
+  #product-3,
+  #product-5 {
+    margin-left: 6%;
+    margin-right: 17%;
+    font-size: 12px;
+  }
+
+  #products #product-2,
+  #product-4 {
+    margin-left: 17%;
+    margin-right: 6%;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  #company p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 569px) and (max-width: 1500px) {
+  #company #missionbox {
+    padding: 8% 4% 20% 9%;
+  }
+
+  #company #visionbox {
+    padding: 20% 10% 8% 4%;
+  }
+}
+
+@media only screen and (max-width: 569px) {
+  #company #missionbox {
+    padding: 8% 4% 5% 20%;
+  }
+
+  #company #visionbox {
+    padding: 8% 20% 8% 4%;
+  }
+
+  #company p {
+    font-size: 14px;
+  }
+}
+
+/* navbar5 bg responsive */
+@media only screen and  (max-width: 5000px){
+#navbgdesk{
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  position: absolute;
+  padding: 0;
+  height: 560px;
+  z-index: -1;
+  top: -1px;
+}
+}
+@media only screen and  (max-width: 700px){
+#navbgdesk{
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    height: 600px;
+  }
+  }
+  @media only screen and  (max-width: 400px){
+   #navbgdesk{
+      background-size: cover;
+      background-position: top;
+      width: 100%;
+      position: absolute;
+      padding: 0;
+      height: 400px;
+    }
+    }
+    
+@media screen and (min-width: 991px) and (max-width: 1500px){
+.collapse{
+  position: relative;
+  z-index: 1001;
+}
+}
+
+
+/* for background responsiveness */
+
+ /* company bg */
+
+ #companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+
+#features{
+    width: 100%;
+    margin: 0 0 500px 0;
+  }
+
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 56px;
+
+  }
+  
+  #feature-subheading{
+    position: relative;
+    padding: 0% 0% 81px 248px ;
+    font-size: 23px;
+
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature.png');
+    background-size: cover;
+    background-position: top;
+    height: 800px;
+    width: 100%;
+    position: absolute;
+    top: 568px;
+    padding: 0;
+  }
+
+  #feature-card-row h5{
+    font-size: 29px;
+  }
+
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 950px;
+    width: 100%;
+    position: absolute;
+    top: 507px;
+    padding: 0;
+    z-index: -1;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 710px;
+    left: 308px;
+    width: 290px;
+    font-size: 23px;
+
+  }
+  .feature-card2{
+    position: absolute;
+    top: 810px;
+    left: 1029px;
+    width: 324px;
+    font-size: 23px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 690px;
+    left: 1767px;
+    width: 368px;
+    font-size: 23px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 308px;
+    left: 2281px;
+    width: 342px;
+    font-size: 23px;
+
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 888px;
+    left: 481px;
+    padding: 0;
+}
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 1382px;
+    left: 880px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 162px;
+  width: 105px;
+  position: absolute;
+  top: 1311px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 237px;
+  width: 50px;
+  position: absolute;
+  top: 1183px;
+  right: 0px;
+  padding: 0;
+}
+@media only screen and (max-width: 2850px){
+  #products .wrirk-pro{
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 1500px){
+  #products .wrirk-pro{
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 1140px){
+  #products .wrirk-pro{
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 758px){
+  #products .wrirk-pro{
+    height: 248px;
+  }
+}
+
+  @media only screen and (max-width: 415px){
+    #products .wrirk-pro{
+      height: 290px;
+    }
+}
+
+  @media only screen and (max-width: 320px){
+    #products .wrirk-pro{
+      height: 290px;
+    }
+}
+
+@media only screen and (max-width: 2850px){
+ 
+  /* company bg */
+
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+
+#features{
+    width: 100%;
+    margin: 0 0 500px 0;
+  }
+
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 56px;
+
+  }
+  
+  #feature-subheading{
+    position: relative;
+    padding: 0% 0% 81px 248px ;
+    font-size: 23px;
+
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature.png');
+    background-size: cover;
+    background-position: top;
+    height: 759px;
+    width: 100%;
+    position: absolute;
+    top: 531px;
+    padding: 0;
+  }
+
+  #feature-card-row h5{
+    font-size: 29px;
+  }
+
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 950px;
+    width: 100%;
+    position: absolute;
+    top: 507px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 710px;
+    left: 300px;
+    width: 310px;
+    font-size: 23px;
+
+  }
+  .feature-card2{
+    position: absolute;
+    top: 757px;
+    left: 919px;
+    width: 324px;
+    font-size: 23px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 605px;
+    left: 1657px;
+    width: 368px;
+    font-size: 23px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 290px;
+    left: 2061px;
+    width: 342px;
+    font-size: 23px;
+
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 888px;
+    left: 481px;
+    padding: 0;
+}
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 1382px;
+    left: 880px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 162px;
+  width: 105px;
+  position: absolute;
+  top: 1311px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 237px;
+  width: 50px;
+  position: absolute;
+  top: 1183px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width:2500px) {
+
+  /* company bg */
+  
+  #companybgline{
+    position: absolute;
+    width: 100%;
+    top: -70px;
+  }
+  
+  #features{
+      width: 100%;
+      margin: 0 0 500px 0;
+    }
+  
+    #feature-heading-box{
+      padding: 0;
+      width: 100%;
+    }
+    #feature-heading-box img{
+      background-size: cover;
+      background-position: top;
+      height: 350px;
+      width: 200px;
+      position: absolute;
+      padding: 0;
+    }
+    #feature-heading{
+      position: relative;
+      padding: 81px 0 0 248px;
+      font-size: 56px;
+  
+    }
+    
+    #feature-subheading{
+      position: relative;
+      padding: 0% 0% 81px 248px ;
+      font-size: 23px;
+  
+    }
+    
+    #feature-card-row{
+      background: url('../assets/img/feature.png');
+      background-size: cover;
+      background-position: top;
+      height: 793px;
+      width: 100%;
+      position: absolute;
+      top: 502px;
+      padding: 0;
+    }
+  
+    #feature-card-row h5{
+      font-size: 25px;
+    }
+
+    #feature-card-row #featurebgline2{
+      background-size: cover;
+      background-position: top;
+      height: 950px;
+      width: 100%;
+      position: absolute;
+      top: 580px;
+      padding: 0;
+    }
+    
+    .feature-card1{
+      position: absolute;
+      top: 745px;
+      left: 270px;
+      width: 290px;
+      font-size: 18px;
+  
+    }
+    .feature-card2{
+      position: absolute;
+      top: 792px;
+      left: 915px;
+      width: 310px;
+      font-size: 18px;
+  
+    }
+    .feature-card3{
+      position: absolute;
+      top: 640px;
+      left: 1519px;
+      width: 288px;
+      font-size: 18px;
+  
+    }
+    .feature-card4{
+      position: absolute;
+      top: 361px;
+      left: 1934px;
+      width: 242px;
+      font-size: 18px;
+  
+    }
+    #productcircle1{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 888px;
+      left: 481px;
+      padding: 0;
+  }
+    #productcircle2{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 1382px;
+      left: 880px;
+      padding: 0;
+  }
+  #productcurve1{
+    background-size: cover;
+    background-position: top;
+    height: 162px;
+    width: 105px;
+    position: absolute;
+    top: 1311px;
+    padding: 0;
+  }
+  #productcurve2{
+    background-size: cover;
+    background-position: top;
+    height: 237px;
+    width: 50px;
+    position: absolute;
+    top: 1183px;
+    right: 0px;
+    padding: 0;
+  }
+}
+@media only screen and (max-width:2430px) {
+
+  /* company bg */
+  
+  #companybgline{
+    position: absolute;
+    width: 100%;
+    top: -70px;
+  }
+  
+  #features{
+      width: 100%;
+      margin: 0 0 500px 0;
+    }
+  
+    #feature-heading-box{
+      padding: 0;
+      width: 100%;
+    }
+    #feature-heading-box img{
+      background-size: cover;
+      background-position: top;
+      height: 350px;
+      width: 200px;
+      position: absolute;
+      padding: 0;
+    }
+    #feature-heading{
+      position: relative;
+      padding: 81px 0 0 248px;
+      font-size: 56px;
+  
+    }
+    
+    #feature-subheading{
+      position: relative;
+      padding: 0% 0% 81px 248px ;
+      font-size: 23px;
+  
+    }
+    
+    #feature-card-row{
+      background: url('../assets/img/feature.png');
+      background-size: cover;
+      background-position: top;
+      height: 793px;
+      width: 100%;
+      position: absolute;
+      top: 502px;
+      padding: 0;
+    }
+  
+    #feature-card-row h5{
+      font-size: 25px;
+    }
+
+    #feature-card-row #featurebgline2{
+      background-size: cover;
+      background-position: top;
+      height: 950px;
+      width: 100%;
+      position: absolute;
+      top: 617px;
+      padding: 0;
+    }
+    
+    .feature-card1{
+      position: absolute;
+      top: 750px;
+      left: 180px;
+      width: 290px;
+      font-size: 18px;
+  
+    }
+    .feature-card2{
+      position: absolute;
+      top: 779px;
+      left: 831px;
+      width: 309px;
+      font-size: 18px;
+  
+    }
+    .feature-card3{
+      position: absolute;
+      top: 642px;
+      left: 1445px;
+      width: 314px;
+      font-size: 18px;
+  
+    }
+    .feature-card4{
+      position: absolute;
+      top: 361px;
+      left: 1877px;
+      width: 242px;
+      font-size: 18px;
+  
+    }
+    #productcircle1{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 888px;
+      left: 481px;
+      padding: 0;
+  }
+    #productcircle2{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 1382px;
+      left: 880px;
+      padding: 0;
+  }
+  #productcurve1{
+    background-size: cover;
+    background-position: top;
+    height: 162px;
+    width: 105px;
+    position: absolute;
+    top: 1311px;
+    padding: 0;
+  }
+  #productcurve2{
+    background-size: cover;
+    background-position: top;
+    height: 237px;
+    width: 50px;
+    position: absolute;
+    top: 1183px;
+    right: 0px;
+    padding: 0;
+  }
+}
+@media only screen and (max-width:2250px) {
+
+  /* company bg */
+  
+  #companybgline{
+    position: absolute;
+    width: 100%;
+    top: -70px;
+  }
+  
+  #features{
+      width: 100%;
+      margin: 0 0 500px 0;
+    }
+  
+    #feature-heading-box{
+      padding: 0;
+      width: 100%;
+    }
+    #feature-heading-box img{
+      background-size: cover;
+      background-position: top;
+      height: 350px;
+      width: 200px;
+      position: absolute;
+      padding: 0;
+    }
+    #feature-heading{
+      position: relative;
+      padding: 81px 0 0 248px;
+      font-size: 56px;
+  
+    }
+    
+    #feature-subheading{
+      position: relative;
+      padding: 0% 0% 81px 248px ;
+      font-size: 23px;
+  
+    }
+    
+    #feature-card-row{
+      background: url('../assets/img/feature.png');
+      background-size: cover;
+      background-position: top;
+      height: 717px;
+      width: 100%;
+      position: absolute;
+      top: 565px;
+      padding: 0;
+    }
+  
+    #feature-card-row h5{
+      font-size: 25px;
+    }
+
+    #feature-card-row #featurebgline2{
+      background-size: cover;
+      background-position: top;
+      height: 950px;
+      width: 100%;
+      position: absolute;
+      top: 497px;
+      padding: 0;
+    }
+    
+    .feature-card1{
+      position: absolute;
+      top: 678px;
+      left: 231px;
+      width: 290px;
+      font-size: 18px;
+  
+    }
+    .feature-card2{
+      position: absolute;
+      top: 711px;
+      left: 804px;
+      width: 297px;
+      font-size: 18px;
+  
+    }
+    .feature-card3{
+      position: absolute;
+      top: 600px;
+      left: 1347px;
+      width: 317px;
+      font-size: 18px;
+  
+    }
+    .feature-card4{
+      position: absolute;
+      top: 311px;
+      left: 1726px;
+      width: 242px;
+      font-size: 18px;
+  
+    }
+    #productcircle1{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 888px;
+      left: 481px;
+      padding: 0;
+  }
+    #productcircle2{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 1382px;
+      left: 880px;
+      padding: 0;
+  }
+  #productcurve1{
+    background-size: cover;
+    background-position: top;
+    height: 162px;
+    width: 105px;
+    position: absolute;
+    top: 1311px;
+    padding: 0;
+  }
+  #productcurve2{
+    background-size: cover;
+    background-position: top;
+    height: 237px;
+    width: 50px;
+    position: absolute;
+    top: 1183px;
+    right: 0px;
+    padding: 0;
+  }
+}
+@media only screen and (max-width:2150px) {
+
+  /* company bg */
+  
+  #companybgline{
+    position: absolute;
+    width: 100%;
+    top: -70px;
+  }
+  
+  #features{
+      width: 100%;
+      margin: 0 0 500px 0;
+    }
+  
+    #feature-heading-box{
+      padding: 0;
+      width: 100%;
+    }
+    #feature-heading-box img{
+      background-size: cover;
+      background-position: top;
+      height: 350px;
+      width: 200px;
+      position: absolute;
+      padding: 0;
+    }
+    #feature-heading{
+      position: relative;
+      padding: 81px 0 0 248px;
+      font-size: 56px;
+  
+    }
+    
+    #feature-subheading{
+      position: relative;
+      padding: 0% 0% 81px 248px ;
+      font-size: 23px;
+  
+    }
+    
+    #feature-card-row{
+      background: url('../assets/img/feature2000.png');
+      background-size: cover;
+      background-position: top;
+      height: 717px;
+      width: 100%;
+      position: absolute;
+      top: 506px;
+      padding: 0;
+    }
+  
+    #feature-card-row h5{
+      font-size: 25px;
+    }
+
+    #feature-card-row #featurebgline2{
+      background-size: cover;
+      background-position: top;
+      height: 950px;
+      width: 100%;
+      position: absolute;
+      top: 557px;
+      padding: 0;
+    }
+    
+    .feature-card1{
+      position: absolute;
+      top: 657px;
+      left: 341px;
+      width: 290px;
+      font-size: 18px;
+  
+    }
+    .feature-card2{
+      position: absolute;
+      top: 680px;
+      left: 747px;
+      width: 274px;
+      font-size: 18px;
+  
+    }
+    .feature-card3{
+      position: absolute;
+      top: 581px;
+      left: 1206px;
+      width: 288px;
+      font-size: 18px;
+  
+    }
+    .feature-card4{
+      position: absolute;
+      top: 346px;
+      left: 1612px;
+      width: 242px;
+      font-size: 18px;
+  
+    }
+    #productcircle1{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 888px;
+      left: 481px;
+      padding: 0;
+  }
+    #productcircle2{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 1382px;
+      left: 880px;
+      padding: 0;
+  }
+  #productcurve1{
+    background-size: cover;
+    background-position: top;
+    height: 162px;
+    width: 105px;
+    position: absolute;
+    top: 1311px;
+    padding: 0;
+  }
+  #productcurve2{
+    background-size: cover;
+    background-position: top;
+    height: 237px;
+    width: 50px;
+    position: absolute;
+    top: 1183px;
+    right: 0px;
+    padding: 0;
+  }
+}
+@media only screen and (max-width:2000px) {
+
+    /* company bg */
+    
+    #companybgline{
+      position: absolute;
+      width: 100%;
+      top: -70px;
+    }
+    
+    #features{
+        width: 100%;
+        margin: 0 0 500px 0;
+      }
+    
+      #feature-heading-box{
+        padding: 0;
+        width: 100%;
+      }
+      #feature-heading-box img{
+        background-size: cover;
+        background-position: top;
+        height: 350px;
+        width: 200px;
+        position: absolute;
+        padding: 0;
+      }
+      #feature-heading{
+        position: relative;
+        padding: 81px 0 0 248px;
+        font-size: 56px;
+    
+      }
+      
+      #feature-subheading{
+        position: relative;
+        padding: 0% 0% 81px 248px ;
+        font-size: 23px;
+    
+      }
+      
+      #feature-card-row{
+        background: url('../assets/img/feature2000.png') no-repeat;
+        background-size: contain;
+        background-position: bottom;
+        height: 717px;
+        width: 100%;
+        position: absolute;
+        top: 524px;
+        padding: 0;
+      }
+    
+      #feature-card-row #featurebgline2{
+        background-size: cover;
+        background-position: top;
+        height: 950px;
+        width: 100%;
+        position: absolute;
+        top: 534px;
+        padding: 0;
+      }
+      #feature-card-row h5{
+        font-size: 25px;
+      }
+      .feature-card1{
+        position: absolute;
+        top: 660px;
+        left: 363px;
+        width: 290px;
+        font-size: 16px;
+    
+      }
+      .feature-card2{
+        position: absolute;
+        top: 667px;
+        left: 729px;
+        width: 274px;
+        font-size: 16px;
+    
+      }
+      .feature-card3{
+        position: absolute;
+        top: 591px;
+        left: 1106px;
+        width: 288px;
+        font-size: 16px;
+    
+      }
+      .feature-card4{
+        position: absolute;
+        top: 433px;
+        left: 1400px;   
+        width: 242px;
+        font-size: 16px;
+    
+      }
+      #productcircle1{
+        background-size: cover;
+        background-position: top;
+        height: 105px;
+        width: 105px;
+        position: absolute;
+        top: 888px;
+        left: 481px;
+        padding: 0;
+    }
+      #productcircle2{
+        background-size: cover;
+        background-position: top;
+        height: 105px;
+        width: 105px;
+        position: absolute;
+        top: 1382px;
+        left: 880px;
+        padding: 0;
+    }
+    #productcurve1{
+      background-size: cover;
+      background-position: top;
+      height: 162px;
+      width: 105px;
+      position: absolute;
+      top: 1311px;
+      padding: 0;
+    }
+    #productcurve2{
+      background-size: cover;
+      background-position: top;
+      height: 237px;
+      width: 50px;
+      position: absolute;
+      top: 1183px;
+      right: 0px;
+      padding: 0;
+    }
+}
+@media only screen and (max-width:1800px) {
+
+  /* company bg */
+  
+  #companybgline{
+    position: absolute;
+    width: 100%;
+    top: -70px;
+  }
+  
+  #features{
+      width: 100%;
+      margin: 0 0 500px 0;
+    }
+  
+    #feature-heading-box{
+      padding: 0;
+      width: 100%;
+    }
+    #feature-heading-box img{
+      background-size: cover;
+      background-position: top;
+      height: 350px;
+      width: 200px;
+      position: absolute;
+      padding: 0;
+    }
+    #feature-heading{
+      position: relative;
+      padding: 81px 0 0 248px;
+      font-size: 56px;
+  
+    }
+    
+    #feature-subheading{
+      position: relative;
+      padding: 0% 0% 81px 248px ;
+      font-size: 23px;
+  
+    }
+    
+    #feature-card-row{
+      background: url('../assets/img/feature.png') no-repeat;
+      background-size: contain;
+      background-position: bottom;
+      height: 717px;
+      width: 100%;
+      position: absolute;
+      top: 463px;
+      padding: 0;
+    }
+  
+    #feature-card-row #featurebgline2{
+      background-size: cover;
+      background-position: top;
+      height: 950px;
+      width: 100%;
+      position: absolute;
+      top: 598px;
+      padding: 0;
+    }
+    #feature-card-row h5{
+      font-size: 25px;
+    }
+    .feature-card1{
+      position: absolute;
+      top: 686px;
+      left: 192px;
+      width: 290px;
+      font-size: 16px;
+  
+    }
+    .feature-card2{
+      position: absolute;
+      top: 707px;
+      left: 598px;
+      width: 274px;
+      font-size: 16px;
+  
+    }
+    .feature-card3{
+      position: absolute;
+      top: 615px;
+      left: 1064px;
+      width: 288px;
+      font-size: 16px;
+  
+    }
+    .feature-card4{
+      position: absolute;
+      top: 411px;
+      left: 1341px;
+      width: 242px;
+      font-size: 16px;
+  
+    }
+    #productcircle1{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 888px;
+      left: 481px;
+      padding: 0;
+  }
+    #productcircle2{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 1382px;
+      left: 880px;
+      padding: 0;
+  }
+  #productcurve1{
+    background-size: cover;
+    background-position: top;
+    height: 162px;
+    width: 105px;
+    position: absolute;
+    top: 1311px;
+    padding: 0;
+  }
+  #productcurve2{
+    background-size: cover;
+    background-position: top;
+    height: 237px;
+    width: 50px;
+    position: absolute;
+    top: 1183px;
+    right: 0px;
+    padding: 0;
+  }
+}
+@media only screen and (max-width:1700px) {
+
+/* company bg */
+
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+
+#features{
+    width: 100%;
+    margin: 0 0 500px 0;
+  }
+
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 56px;
+
+  }
+  
+  #feature-subheading{
+    position: relative;
+    padding: 0% 0% 81px 248px ;
+    font-size: 23px;
+
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature.png') no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    height: 717px;
+    width: 100%;
+    position: absolute;
+    top: 456px;
+    padding: 0;
+  }
+
+  #feature-card-row h5{
+    font-size: 21px;
+  }
+
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 950px;
+    width: 100%;
+    position: absolute;
+    top: 606px;
+    padding: 0;
+  }
+  #feature h5{
+    font-size: 30px;
+  }
+  .feature-card1{
+    position: absolute;
+    top: 693px;
+    left: 201px;
+    width: 290px;
+    font-size: 15px;
+
+  }
+  .feature-card2{
+    position: absolute;
+    top: 710px;
+    left: 596px;
+    width: 274px;
+    font-size: 15px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 618px;
+    left: 1021px;
+    width: 258px;
+    font-size: 15px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 410px;
+    left: 1305px;
+    width: 203px;
+    font-size: 15px;
+
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 888px;
+    left: 481px;
+    padding: 0;
+}
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 1382px;
+    left: 880px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 162px;
+  width: 105px;
+  position: absolute;
+  top: 1311px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 237px;
+  width: 50px;
+  position: absolute;
+  top: 1183px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width:1666px) {
+
+  /* company bg */
+  
+  #companybgline{
+    position: absolute;
+    width: 100%;
+    top: -70px;
+  }
+  
+  #features{
+      width: 100%;
+      margin: 0 0 500px 0;
+    }
+  
+    #feature-heading-box{
+      padding: 0;
+      width: 100%;
+    }
+    #feature-heading-box img{
+      background-size: cover;
+      background-position: top;
+      height: 350px;
+      width: 200px;
+      position: absolute;
+      padding: 0;
+    }
+    #feature-heading{
+      position: relative;
+      padding: 81px 0 0 248px;
+      font-size: 56px;
+  
+    }
+    
+    #feature-subheading{
+      position: relative;
+      padding: 0% 0% 81px 248px ;
+      font-size: 23px;
+  
+    }
+    
+    #feature-card-row{
+      background: url('../assets/img/feature-1600.png') no-repeat;
+      background-size: contain;
+      background-position: bottom;
+      height: 717px;
+      width: 100%;
+      position: absolute;
+      top: 444px;
+      padding: 0;
+    }
+  
+    #feature-card-row h5{
+      font-size: 21px;
+    }
+  
+    #feature-card-row #featurebgline2{
+      background-size: cover;
+      background-position: top;
+      height: 950px;
+      width: 100%;
+      position: absolute;
+      top: 650px;
+      padding: 0;
+    }
+    #feature h5{
+      font-size: 30px;
+    }
+    .feature-card1{
+      position: absolute;
+      top: 680px;
+      left: 187px;
+      width: 290px;
+      font-size: 15px;
+  
+    }
+    .feature-card2{
+      position: absolute;
+      top: 710px;
+      left: 596px;
+      width: 274px;
+      font-size: 15px;
+  
+    }
+    .feature-card3{
+      position: absolute;
+      top: 629px;
+      left: 940px;
+      width: 270px;
+      font-size: 15px;
+  
+    }
+    .feature-card4{
+      position: absolute;
+      top: 464px;
+      left: 1191px;  
+      width: 203px;
+      font-size: 15px;
+  
+    }
+    #productcircle1{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 888px;
+      left: 481px;
+      padding: 0;
+  }
+    #productcircle2{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 1382px;
+      left: 880px;
+      padding: 0;
+  }
+  #productcurve1{
+    background-size: cover;
+    background-position: top;
+    height: 162px;
+    width: 105px;
+    position: absolute;
+    top: 1311px;
+    padding: 0;
+  }
+  #productcurve2{
+    background-size: cover;
+    background-position: top;
+    height: 237px;
+    width: 50px;
+    position: absolute;
+    top: 1183px;
+    right: 0px;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 1500px) {
+
+  /* company bg */
+  
+  #companybgline{
+    position: absolute;
+    width: 100%;
+    top: -70px;
+  }
+  
+  #feature-card-row h5{
+    font-size: 17px;
+  }
+
+  #features{
+      width: 100%;
+      margin: 0 0 380px 0;
+    }
+  
+    #feature-heading-box{
+      padding: 0;
+      width: 100%;
+    }
+    #feature-heading-box img{
+      background-size: cover;
+      background-position: top;
+      height: 350px;
+      width: 200px;
+      position: absolute;
+      padding: 0;
+    }
+    #feature-heading{
+      position: relative;
+      padding: 81px 0 0 248px;
+      font-size: 54px;
+  
+    }
+    
+    #feature-subheading{
+      position: relative;
+      padding: 0% 0% 81px 248px ;
+      font-size: 22px;
+  
+    }
+    
+    #feature-card-row{
+      background: url('../assets/img/feature.png');
+      background-size: cover;
+      background-position: top;
+      height: 403px;
+      width: 100%;
+      position: absolute;
+      top: 763px;
+      padding: 0;
+    }
+  
+    #feature-card-row #featurebgline2{
+      background-size: cover;
+      background-position: top;
+      height: 950px;
+      width: 100%;
+      position: absolute;
+      top: 296px;
+      padding: 0;
+    }
+    
+    .feature-card1{
+      position: absolute;
+      top: 389px;
+      left: 187px;
+      width: 213px;
+      font-size: 15px;
+  
+    }
+    .feature-card2{
+      position: absolute;
+      top: 405px;
+      left: 523px;
+      width: 252px;
+      font-size: 15px;
+  
+    }
+    .feature-card3{
+      position: absolute;
+      top: 332px;
+      left: 896px;
+      width: 20%;
+      font-size: 15px;
+  
+    }
+    .feature-card4{
+      position: absolute;
+      top: 152px;
+      left: 1126px;
+      width: 242px;
+      font-size: 15px;
+  
+    }
+    #productcircle1{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 888px;
+      left: 481px;
+      padding: 0;
+  }
+    #productcircle2{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 1382px;
+      left: 880px;
+      padding: 0;
+  }
+  #productcurve1{
+    background-size: cover;
+    background-position: top;
+    height: 162px;
+    width: 105px;
+    position: absolute;
+    top: 1311px;
+    padding: 0;
+  }
+  #productcurve2{
+    background-size: cover;
+    background-position: top;
+    height: 237px;
+    width: 50px;
+    position: absolute;
+    top: 1183px;
+    right: 0px;
+    padding: 0;
+  }
+}
+  @media only screen and (max-width: 1400px) {
+    /* company bg */
+  #companybgline{
+    position: absolute;
+    width: 100%;
+    top: -70px;
+  }
+    #features{
+      width: 100%;
+      margin: 0 0 380px 0;
+    }
+  
+    #feature-card-row h5{
+      font-size: 17px;
+    }
+
+    #feature-heading-box{
+      padding: 0;
+      width: 100%;
+    }
+    #feature-heading-box img{
+      background-size: cover;
+      background-position: top;
+      height: 350px;
+      width: 200px;
+      position: absolute;
+      padding: 0;
+    }
+    #feature-heading{
+      position: relative;
+      padding: 81px 0 0 248px;
+      font-size: 54px;
+  
+    }
+    
+    #feature-subheading{
+      position: relative;
+      padding: 0% 0% 81px 248px ;
+      font-size: 22px;
+  
+    }
+    
+    #feature-card-row{
+      background: url('../assets/img/feature.png');
+      background-size: cover;
+      background-position: top;
+      height: 400px;
+      width: 100%;
+      position: absolute;
+      top: 656px;
+      padding: 0;
+    }
+    #feature-card-row #featurebgline2{
+      background-size: cover;
+      background-position: top;
+      height: 950px;
+      width: 100%;
+      position: absolute;
+      top: 321px;
+      padding: 0;
+    }
+    
+    .feature-card1{
+      position: absolute;
+      top: 377px;
+      left: 153px;
+      width: 213px;
+      font-size: 16px;
+  
+    }
+    .feature-card2{
+      position: absolute;
+      top: 400px;
+      left: 502px;
+      width: 259px;
+      font-size: 16px;
+  
+    }
+    .feature-card3{
+      position: absolute;
+      top: 326px;
+      left: 832px;
+      width: 261px;
+      font-size: 16px;
+  
+    }
+    .feature-card4{
+      position: absolute;
+      top: 161px;
+      left: 1061px;
+      width: 242px;
+      font-size: 16px;
+  
+    }
+    #productcircle1{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 888px;
+      left: 481px;
+      padding: 0;
+  }
+    #productcircle2{
+      background-size: cover;
+      background-position: top;
+      height: 105px;
+      width: 105px;
+      position: absolute;
+      top: 1382px;
+      left: 880px;
+      padding: 0;
+  }
+  #productcurve1{
+    background-size: cover;
+    background-position: top;
+    height: 162px;
+    width: 105px;
+    position: absolute;
+    top: 1311px;
+    padding: 0;
+  }
+  #productcurve2{
+    background-size: cover;
+    background-position: top;
+    height: 237px;
+    width: 50px;
+    position: absolute;
+    top: 1183px;
+    right: 0px;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 380px 0;
+  }
+
+  #feature-card-row h5{
+    font-size: 17px;
+  }
+
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 54px;
+
+  }
+  
+  #feature-subheading{
+    position: relative;
+    padding: 0% 0% 81px 248px ;
+    font-size: 23px;
+
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature.png');
+    background-size: cover;
+    background-position: top;
+    height: 370px;
+    width: 100%;
+    position: absolute;
+    top: 684px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 950px;
+    width: 100%;
+    position: absolute;
+    top: 251px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 355px;
+    left: 153px;
+    width: 213px;
+    font-size: 16px;
+
+  }
+  .feature-card2{
+    position: absolute;
+    top: 365px;
+    left: 477px;
+    width: 213px;
+    font-size: 16px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 308px;
+    left: 788px;
+    width: 20%;
+    font-size: 16px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 140px;
+    left: 1015px;
+    width: 242px;
+    font-size: 16px;
+
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 888px;
+    left: 481px;
+    padding: 0;
+}
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 1382px;
+    left: 880px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 162px;
+  width: 105px;
+  position: absolute;
+  top: 1311px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 237px;
+  width: 50px;
+  position: absolute;
+  top: 1183px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and  (max-width: 1256px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 380px 0;
+  }
+
+  #feature-card-row h5{
+    font-size: 17px;
+  }
+
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 54px;
+
+  }
+  
+  #feature-subheading{
+    position: relative;
+    padding: 0% 0% 81px 248px ;
+    font-size: 21px;
+
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature.png');
+    background-size: cover;
+    background-position: top;
+    height: 370px;
+    width: 100%;
+    position: absolute;
+    top: 680px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 950px;
+    width: 100%;
+    position: absolute;
+    top: 221px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 333px;
+    left: 103px;
+    width: 213px;
+    font-size: 16px;
+
+  }
+  .feature-card2{
+    position: absolute;
+    top: 365px;
+    left: 440px;
+    width: 213px;
+    font-size: 16px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 295px;
+    left: 719px;
+    width: 230px;
+    font-size: 16px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 123px;
+    left: 969px;
+    width: 206px;
+    font-size: 16px;
+
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 888px;
+    left: 481px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 1382px;
+    left: 880px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 162px;
+  width: 105px;
+  position: absolute;
+  top: 1311px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 237px;
+  width: 50px;
+  position: absolute;
+  top: 1183px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 1200px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 380px 0;
+  }
+
+  #feature-card-row h5{
+    font-size: 17px;
+  }
+
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 54px;
+
+  }
+  
+  #feature-subheading{
+    position: relative;
+    padding: 0% 0% 81px 248px ;
+    font-size: 21px;
+
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature.png');
+    background-size: cover;
+    background-position: top;
+    height: 382px;
+    width: 100%;
+    position: absolute;
+    top: 564px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 855px;
+    width: 100%;
+    position: absolute;
+    top: 332px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 354px;
+    left: 115px;
+    width: 213px;
+    font-size: 15px;
+
+  }
+  .feature-card2{
+    position: absolute;
+    top: 371px;
+    left: 450px;
+    width: 213px;
+    font-size: 15px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 309px;
+    left: 719px;
+    width: 230px;
+    font-size: 15px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 135px;
+    left: 945px;
+    width: 155px;
+    font-size: 15px;
+
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 861px;
+    left: 408px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 1345px;
+    left: 779px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 162px;
+  width: 105px;
+  position: absolute;
+  top: 1281px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 237px;
+  width: 50px;
+  position: absolute;
+  top: 1137px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and(max-width: 1130px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 380px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+
+  #feature-card-row h5{
+    font-size: 17px;
+  }
+
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 54px;
+
+  }
+  
+  #feature-subheading{
+    position: relative;
+    padding: 0% 0% 81px 248px ;
+    font-size: 21px;
+
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature.png');
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 711px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 816px;
+    width: 100%;
+    position: absolute;
+    top: 251px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 340px;
+    left: 140px;
+    width: 213px;
+    font-size: 15px;
+
+  }
+  .feature-card2{
+    position: absolute;
+    top: 371px;
+    left: 450px;
+    width: 213px;
+    font-size: 15px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 309px;
+    left: 719px;
+    width: 230px;
+    font-size: 15px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 157px;
+    left: 934px;
+    width: 210px;
+    font-size: 15px;
+
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 861px;
+    left: 383px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 1345px;
+    left: 779px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 162px;
+  width: 105px;
+  position: absolute;
+  top: 1281px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 237px;
+  width: 50px;
+  position: absolute;
+  top: 1137px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and  (max-width: 1100px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 380px 0;
+  }
+  #feature-card-row h5{
+    font-size: 17px;
+  }
+
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 54px;
+  }
+  
+  #feature-subheading{
+    position: relative;
+    padding: 0% 0% 81px 248px ;
+    font-size: 21px;
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature.png');
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 591px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 800px;
+    width: 100%;
+    position: absolute;
+    top: 303px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 324px;
+    left: 153px;
+    width: 213px;
+    font-size: 14px;
+
+  }
+  .feature-card2{
+    position: absolute;
+    top: 341px;
+    left: 420px;
+    width: 213px;
+    font-size: 14px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 274px;
+    left: 652px;
+    width: 230px;
+    font-size: 14px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 126px;
+    left: 862px;
+    width: 183px;
+    font-size: 14px;
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 861px;
+    left: 370px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 1345px;
+    left: 779px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 162px;
+  width: 105px;
+  position: absolute;
+  top: 1281px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 237px;
+  width: 50px;
+  position: absolute;
+  top: 1137px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and  (max-width: 1050px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 380px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 53px;
+
+  }
+  
+  #feature-subheading{
+    position: relative;
+    padding: 0 236px 81px 248px ;
+    font-size: 21px;
+  }
+  
+  #feature-card-row h5{
+    font-size: 17px;
+  }
+
+  #feature-card-row{
+    background: url('../assets/img/feature.png');
+    background-size: cover;
+    background-position: top;
+    height: 390px;
+    width: 100%;
+    position: absolute;
+    top: 537px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 760px;
+    width: 100%;
+    position: absolute;
+    top: 358px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 363px;
+    left: 78px;
+    width: 213px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 378px;
+    left: 380px;
+    width: 213px;
+  }
+  .feature-card3{
+    position: absolute;
+    top: 306px;
+    left: 655px;
+    width: 230px;
+  }
+  .feature-card4{
+    position: absolute;
+    top: 161px;
+    left: 849px;
+    width: 143px;
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 861px;
+    left: 333px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 1345px;
+    left: 779px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1291px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 1000px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 380px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 53px;
+
+  }
+  
+  #feature-card-row h5{
+    font-size: 17px;
+  }
+
+  #feature-subheading{
+    position: relative;
+    padding: 0 236px 81px 248px ;
+    font-size: 21px;
+  }
+  
+ 
+  #feature-card-row{
+    background: url('../assets/img/feature1000.png');
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 600px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 760px;
+    width: 100%;
+    position: absolute;
+    top: 283px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 321px;
+    left: 95px;
+    width: 213px;
+    font-size: 12px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 342px;
+    left: 337px;
+    width: 213px;
+    font-size: 12px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 292px;
+    left: 531px;
+    font-size: 12px;
+    width: 236px;
+  }
+  .feature-card4{
+    position: absolute;
+    top: 172px;
+    left: 741px;
+    font-size: 12px;
+    width: 197px;
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1024px;
+    left: 416px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1734px;
+    left: 779px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1691px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 991px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 380px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 53px;
+
+  }
+  
+  #feature-card-row h5{
+    font-size: 17px;
+  }
+
+  #feature-subheading{
+    position: relative;
+    padding: 0 236px 81px 248px ;
+    font-size: 21px;
+  }
+  
+ 
+  #feature-card-row{
+    background: url('../assets/img/feature1000.png');
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 1132px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 760px;
+    width: 100%;
+    position: absolute;
+    top: 283px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 314px;
+    left: 95px;
+    width: 213px;
+    font-size: 12px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 342px;
+    left: 337px;
+    width: 213px;
+    font-size: 12px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 292px;
+    left: 556px;
+    font-size: 12px;
+    width: 219px;
+  }
+  .feature-card4{
+    position: absolute;
+    top: 172px;
+    left: 748px;
+    font-size: 12px;
+    width: 163px;
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1024px;
+    left: 416px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1734px;
+    left: 779px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1691px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 950px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 380px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 53px;
+
+  }
+  
+  #feature-card-row h5{
+    font-size: 16px;
+  }
+
+  #feature-subheading{
+    position: relative;
+    padding: 0 236px 81px 248px ;
+    font-size: 21px;
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature1000.png');
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 1125px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 760px;
+    width: 100%;
+    position: absolute;
+    top: 283px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 311px;
+    left: 80px;
+    width: 190px;
+    font-size: 13px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 318px;
+    left: 305px;
+    width: 190px;
+    font-size: 13px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 279px;
+    left: 524px;
+    width: 213px;
+    font-size: 13px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 160px;
+    left: 733px;
+    width: 155px;
+    font-size: 13px;
+
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1049px;
+    left: 416px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1734px;
+    left: 615px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1691px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 900px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 380px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 53px;
+
+  }
+  
+  #feature-card-row h5{
+    font-size: 16px;
+  }
+
+  #feature-subheading{
+    position: relative;
+    padding: 0 236px 81px 248px ;
+    font-size: 21px;
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature1000.png');
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 1115px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 760px;
+    width: 100%;
+    position: absolute;
+    top: 309px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 316px;
+    left: 80px;
+    width: 190px;
+    font-size: 13px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 318px;
+    left: 305px;
+    width: 190px;
+    font-size: 13px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 269px;
+    left: 514px;
+    width: 213px;
+    font-size: 13px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 179px;
+    left: 710px;
+    width: 126px;
+    font-size: 13px;
+
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1049px;
+    left: 416px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1734px;
+    left: 615px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1691px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 840px) {
+
+/* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 380px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 53px;
+
+  }
+  
+  #feature-card-row h5{
+    font-size: 16px;
+  }
+
+  #feature-subheading{
+    position: relative;
+    padding: 0 236px 81px 248px ;
+    font-size: 21px;
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature1000.png');
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 1136px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 760px;
+    width: 100%;
+    position: absolute;
+    top: 313px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 310px;
+    left: 80px;
+    width: 190px;
+    font-size: 13px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 318px;
+    left: 305px;
+    width: 190px;
+    font-size: 13px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 272px;
+    left: 497px;
+    width: 145px;
+    font-size: 13px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 159px;
+    left: 676px;
+    width: 119px;
+    font-size: 13px;
+
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1049px;
+    left: 416px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1734px;
+    left: 615px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1691px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and  (max-width: 800px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 340px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 43px;
+
+  }
+  #feature-card-row h5{
+    font-size: 16px;
+  }
+  
+  #feature-subheading{
+    position: relative;
+    padding: 0 236px 81px 248px ;
+    font-size: 18px;
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature-800.png');
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 1104px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 760px;
+    width: 100%;
+    position: absolute;
+    top: 321px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 313px;
+    left: 34px;
+    width: 190px;
+    font-size: 11px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 318px;
+    left: 260px;
+    width: 190px;
+    font-size: 11px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 281px;
+    left: 454px;
+    width: 155px;
+    font-size: 11px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 188px;
+    left: 616px;
+    width: 141px;
+    font-size: 11px;
+
+  }
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 1800px;
+    left: 479px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1691px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and  (max-width: 767px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 340px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 43px;
+
+  }
+  #feature-card-row h5{
+    font-size: 16px;
+  }
+  
+  #feature-subheading{
+    position: relative;
+    padding: 0 152px 81px 248px ;
+    font-size: 18px;
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature-800.png');
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 1042px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 760px;
+    width: 100%;
+    position: absolute;
+    top: 285px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 311px;
+    left: 34px;
+    width: 190px;
+    font-size: 11px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 318px;
+    left: 269px;
+    width: 190px;
+    font-size: 11px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 269px;
+    left: 453px;
+    width: 165px;
+    font-size: 11px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 189px;
+    left: 606px;
+    width: 119px;
+    font-size: 11px;
+
+  }
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 1800px;
+    left: 479px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1691px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and  (max-width: 750px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 380px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 43px;
+
+  }
+  
+  #feature-card-row h5{
+    font-size: 17px;
+  }
+
+  #feature-subheading{
+    position: relative;
+    padding: 0 152px 81px 248px ;
+    font-size: 18px;
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature-800.png');
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 1044px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 760px;
+    width: 100%;
+    position: absolute;
+    top: 290px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 313px;
+    left: 34px;
+    width: 171px;
+    font-size: 11px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 318px;
+    left: 223px;
+    width: 172px;
+    font-size: 11px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 283px;
+    left: 425px;
+    width: 148px;
+    font-size: 11px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 198px;
+    left: 583px;
+    width: 117px;
+    font-size: 11px;
+
+  }
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 1800px;
+    left: 479px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1691px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and  (max-width: 720px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 380px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 200px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 248px;
+    font-size: 43px;
+
+  }
+  
+  #feature-card-row h5{
+    font-size: 17px;
+  }
+
+  #feature-subheading{
+    position: relative;
+    padding: 0 0 81px 248px ;
+    font-size: 18px;
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature-800.png');
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 1035px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 760px;
+    width: 100%;
+    position: absolute;
+    top: 304px;
+    padding: 0;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 311px;
+    left: 34px;
+    width: 171px;
+    font-size: 11px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 318px;
+    left: 221px;
+    width: 172px;
+    font-size: 11px;
+
+  }
+  .feature-card3{
+    position: absolute;
+    top: 279px;
+    left: 407px;
+    width: 162px;
+    font-size: 11px;
+
+  }
+  .feature-card4{
+    position: absolute;
+    top: 209px;
+    left: 574px;
+    width: 117px;
+    font-size: 11px;
+
+  }
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 1800px;
+    left: 479px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1691px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 700px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 800px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 313px;
+    width: 167px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 209px;
+    font-size: 38px;
+  }
+  #feature-subheading{
+    position: relative;
+    padding: 0 0 81px 209px ;
+    font-size: 17px;
+  }
+  
+  #feature-card-row h5{
+    font-size: 17px;
+  }
+  #feature-card-row{
+    background: url('../assets/img/feature-700.png');
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 1128px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 293px;
+    width: 100%;
+    position: absolute;
+    top: 147px;
+    padding: 0;
+    z-index: -1;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 241px;
+    left: 126px;
+    width: 213px;
+    font-size: 14px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 143px;
+    left: 380px;
+    width: 213px;
+    font-size: 14px;
+}
+  
+  .feature-card3{
+    position: absolute;
+    top: 554px;
+    left: 87px;
+    width: 230px;
+    font-size: 14px;
+  }
+  .feature-card4{
+    position: absolute;
+    top: 464px;
+    left: 337px;
+    width: 242px;
+    font-size: 14px;
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    top: 995px;
+    left: 517px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1278px;
+    left: 119px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1648px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 600px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 640px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 313px;
+    width: 167px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 209px;
+    font-size: 38px;
+  }
+  #feature-subheading{
+    position: relative;
+    padding: 0 0 81px 209px ;
+    font-size: 17px;
+  }
+  
+  #feature-card-row h5{
+    font-size: 17px;
+  }
+
+  #feature-card-row{
+    background: url('../assets/img/feature-700.png');
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 1130px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 293px;
+    width: 100%;
+    position: absolute;
+    top: 147px;
+    padding: 0;
+    z-index: -1;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 246px;
+    left: 69px;
+    width: 203px;
+    font-size: 13px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 131px;
+    left: 358px;
+    width: 184px;
+    font-size: 13px;
+}
+  
+  .feature-card3{
+    position: absolute;
+    top: 545px;
+    left: 72px;
+    width: 206px;
+    font-size: 13px;
+  }
+  .feature-card4{
+    position: absolute;
+    top: 487px;
+    left: 338px;
+    width: 183px;
+    font-size: 13px;
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    top: 941px;
+    left: 397px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1314px;
+    left: 47px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1648px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 599px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 640px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 313px;
+    width: 167px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 209px;
+    font-size: 38px;
+  }
+  #feature-subheading{
+    position: relative;
+    padding: 0 0 81px 209px ;
+    font-size: 17px;
+  }
+  
+  #feature-card-row h5{
+    font-size: 17px;
+  }
+
+  #feature-card-row{
+    background: url('../assets/img/feature-700.png');
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 1045px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 293px;
+    width: 100%;
+    position: absolute;
+    top: 147px;
+    padding: 0;
+    z-index: -1;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 244px;
+    left: 75px;
+    width: 203px;
+    font-size: 13px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 140px;
+    left: 358px;
+    width: 184px;
+    font-size: 13px;
+}
+  
+  .feature-card3{
+    position: absolute;
+    top: 548px;
+    left: 75px;
+    width: 206px;
+    font-size: 13px;
+  }
+  .feature-card4{
+    position: absolute;
+    top: 480px;
+    left: 343px;
+    width: 181px;
+    font-size: 13px;
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    top: 941px;
+    left: 397px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1314px;
+    left: 47px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1648px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 550px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 563px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 313px;
+    width: 167px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 209px;
+    font-size: 38px;
+  }
+  #feature-subheading{
+    position: relative;
+    padding: 0 0 81px 209px ;
+    font-size: 17px;
+  }
+  
+  #feature-card-row h5{
+    font-size: 16px;
+  }
+
+  #feature-card-row{
+    background: url('../assets/img/feature-700.png');
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 1018px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 293px;
+    width: 100%;
+    position: absolute;
+    top: 147px;
+    padding: 0;
+    z-index: -1;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 288px;
+    left: 51px;
+    width: 203px;
+    font-size: 13px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 143px;
+    left: 330px;
+    width: 184px;
+    font-size: 13px;
+}
+  
+  .feature-card3{
+    position: absolute;
+    top: 551px;
+    left: 41px;
+    width: 206px;
+    font-size: 13px;
+  }
+  .feature-card4{
+    position: absolute;
+    top: 453px;
+    left: 305px;
+    width: 187px;
+    font-size: 13px;
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    top: 941px;
+    left: 397px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1314px;
+    left: 47px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1648px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 520px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 563px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 313px;
+    width: 167px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 209px;
+    font-size: 38px;
+  }
+  #feature-subheading{
+    position: relative;
+    padding: 0 0 81px 209px ;
+    font-size: 17px;
+  }
+  
+  #feature-card-row h5{
+    font-size: 16px;
+  }
+
+  #feature-card-row{
+    background: url('../assets/img/feature-700.png');
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 968px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 293px;
+    width: 100%;
+    position: absolute;
+    top: 147px;
+    padding: 0;
+    z-index: -1;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 288px;
+    left: 51px;
+    width: 203px;
+    font-size: 13px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 160px;
+    left: 299px;
+    width: 167px;
+    font-size: 13px;
+}
+  
+  .feature-card3{
+    position: absolute;
+    top: 551px;
+    left: 41px;
+    width: 206px;
+    font-size: 13px;
+  }
+  .feature-card4{
+    position: absolute;
+    top: 432px;
+    left: 305px;
+    width: 164px;
+    font-size: 13px;
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    top: 941px;
+    left: 397px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1314px;
+    left: 47px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 131px;
+  width: 77px;
+  position: absolute;
+  top: 1648px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 500px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -16px;
+  height: 310px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 563px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 313px;
+    width: 167px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 209px;
+    font-size: 38px;
+  }
+  #feature-subheading{
+    position: relative;
+    padding: 0 0 81px 209px ;
+    font-size: 17px;
+  }
+  
+  #feature-card-row h5{
+    font-size: 16px;
+  }
+
+  #feature-card-row{
+    background: url('../assets/img/feature-450.png');
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 932px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 293px;
+    width: 100%;
+    position: absolute;
+    top: 147px;
+    padding: 0;
+    z-index: -1;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 251px;
+    left: 69px;
+    width: 164px;
+    font-size: 12px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 166px;
+    left: 279px;
+    width: 144px;
+    font-size: 12px;
+}
+  
+  .feature-card3{
+    position: absolute;
+    top: 491px;
+    left: 55px;
+    width: 168px;
+    font-size: 12px;
+  }
+  .feature-card4{
+    position: absolute;
+    top: 397px;
+    left: 246px;
+    width: 161px;
+    font-size: 12px;
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    top: 941px;
+    left: 334px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1365px;
+    left: 31px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 97px;
+  width: 49px;
+  position: absolute;
+  top: 1641px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 450px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -16px;
+  height: 310px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 563px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 313px;
+    width: 167px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 209px;
+    font-size: 38px;
+  }
+  #feature-subheading{
+    position: relative;
+    padding: 0 0 81px 209px ;
+    font-size: 17px;
+  }
+  
+  #feature-card-row h5{
+    font-size: 16px;
+  }
+
+  #feature-card-row{
+    background: url('../assets/img/feature-450.png');
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 932px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 293px;
+    width: 100%;
+    position: absolute;
+    top: 147px;
+    padding: 0;
+    z-index: -1;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 251px;
+    left: 69px;
+    width: 164px;
+    font-size: 12px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 163px;
+    left: 250px;
+    width: 144px;
+    font-size: 12px;
+}
+  
+  .feature-card3{
+    position: absolute;
+    top: 491px;
+    left: 40px;
+    width: 168px;
+    font-size: 12px;
+  }
+  .feature-card4{
+    position: absolute;
+    top: 397px;
+    left: 233px;
+    width: 140px;
+    font-size: 12px;
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    top: 941px;
+    left: 334px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1365px;
+    left: 31px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 97px;
+  width: 49px;
+  position: absolute;
+  top: 1641px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 400px) {
+/* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: -16px;
+  height: 310px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 515px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 256px;
+    width: 125px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 140px;
+    font-size: 30px;
+  }
+  #feature-subheading{
+    position: relative;
+    padding: 0 0 81px 140px ;
+    font-size: 12px;
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature-450.png');
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 852px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 293px;
+    width: 100%;
+    position: absolute;
+    top: 147px;
+    padding: 0;
+    z-index: -1;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 273px;
+    left: 18px;
+    width: 185px;
+    font-size: 10px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 179px;
+    left: 218px;
+    width: 139px;
+    font-size: 10px;
+}
+  
+  .feature-card3{
+    position: absolute;
+    top: 486px;
+    left: 23px;
+    width: 134px;
+    font-size: 11px;
+  }
+  .feature-card4{
+    position: absolute;
+    top: 420px;
+    left: 203px;
+    width: 141px;
+    font-size: 10px;
+
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    top: 941px;
+    left: 224px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1195px;
+    left: 31px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 97px;
+  width: 41px;
+  position: absolute;
+  top: 1455px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 350px) {
+/* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  height: 310px;
+}
+  #features{
+    width: 100%;
+    margin: 0 0 515px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 256px;
+    width: 125px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 140px;
+    font-size: 30px;
+  }
+  #feature-subheading{
+    position: relative;
+    padding: 0 0 81px 140px ;
+    font-size: 12px;
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature-450.png');
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 822px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 293px;
+    width: 100%;
+    position: absolute;
+    top: 147px;
+    padding: 0;
+    z-index: -1;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 256px;
+    left: 18px;
+    width: 155px;
+    font-size: 10px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 179px;
+    left: 175px;
+    width: 128px;
+    font-size: 10px;
+}
+  
+  .feature-card3{
+    position: absolute;
+    top: 488px;
+    left: 23px;
+    width: 134px;
+    font-size: 11px;
+  }
+  .feature-card4{
+    position: absolute;
+    top: 404px;
+    left: 170px;
+    width: 121px;
+    font-size: 10px;
+
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    top: 941px;
+    left: 204px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1195px;
+    left: 31px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 97px;
+  width: 41px;
+  position: absolute;
+  top: 1455px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
+@media only screen and (max-width: 300px) {
+  /* company bg */
+#companybgline{
+  position: absolute;
+  width: 100%;
+  top: 91px;
+  height: 209px;
+
+}
+  #features{
+    width: 100%;
+    margin: 0 0 515px 0;
+  }
+  #feature-heading-box{
+    padding: 0;
+    width: 100%;
+  }
+  #feature-heading-box img{
+    background-size: cover;
+    background-position: top;
+    height: 216px;
+    width: 97px;
+    position: absolute;
+    padding: 0;
+  }
+  #feature-heading{
+    position: relative;
+    padding: 81px 0 0 111px;
+    font-size: 25px;
+  }
+  #feature-subheading{
+    position: relative;
+    padding: 0 0 81px 111px ;
+    font-size: 12px;
+  }
+  
+  #feature-card-row{
+    background: url('../assets/img/feature-450.png');
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 810px;
+    padding: 0;
+  }
+  #feature-card-row #featurebgline2{
+    background-size: cover;
+    background-position: top;
+    height: 293px;
+    width: 100%;
+    position: absolute;
+    top: 147px;
+    padding: 0;
+    z-index: -1;
+  }
+  
+  .feature-card1{
+    position: absolute;
+    top: 256px;
+    left: 18px;
+    width: 124px;
+    font-size: 10px;
+  }
+  .feature-card2{
+    position: absolute;
+    top: 170px;
+    left: 165px;
+    width: 105px;
+    font-size: 10px;
+}
+  
+  .feature-card3{
+    position: absolute;
+    top: 491px;
+    left: 23px;
+    width: 118px;
+    font-size: 11px;
+  }
+  .feature-card4{
+    position: absolute;
+    top: 382px;
+    left: 162px;
+    width: 101px;
+    font-size: 10px;
+
+  }
+  #productcircle1{
+    background-size: cover;
+    background-position: top;
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    top: 941px;
+    left: 180px;
+    padding: 0;
+}
+
+  #productcircle2{
+    background-size: cover;
+    background-position: top;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1195px;
+    left: 31px;
+    padding: 0;
+}
+#productcurve1{
+  background-size: cover;
+  background-position: top;
+  height: 97px;
+  width: 41px;
+  position: absolute;
+  top: 1455px;
+  padding: 0;
+}
+#productcurve2{
+  background-size: cover;
+  background-position: top;
+  height: 161px;
+  width: 37px;
+  position: absolute;
+  top: 1210px;
+  right: 0px;
+  padding: 0;
+}
+}
