@@ -6,7 +6,7 @@ export default function Producthead() {
   return (
     <div
       className="producthead row container-fluid position-relative d-flex "
-      style={{padding: "8% 8% 8% 8%"}}
+      style={{padding: "8%"}}
       id="producthead"
     >
       <div className="producthead-img mx-auto col-lg-4 col-md-4 col-sm-12 col-12 order-lg-1 order-md-0 order-sm-0 order-0 h-75">
